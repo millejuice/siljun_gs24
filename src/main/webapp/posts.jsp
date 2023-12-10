@@ -43,7 +43,7 @@
 </head>
 <body>
 <div>
-  <h1>자유게시판</h1>
+  <h1>주현이와 준영이의 마트</h1>
 
 </div>
 <br>
@@ -57,6 +57,7 @@
     <th>UploadTime</th>
     <th>Expiration Date</th>
     <th>1 + 1 ?</th>
+    <th>Detail</th>
     <th>Edit</th>
     <th>Delete</th>
   </tr>
@@ -70,9 +71,9 @@
       <td>${u.uploadTime}</td>
       <td>${u.expirationDate}</td>
       <td>${u.onePlusOne}</td>
-      <td><a href="view/${u.seq}">Detail</a></td>
-      <td><a href="editform/${u.seq}">Edit</a></td>
-      <td><a href="javascript:delete_ok('${u.seq}')">Delete</a></td>
+      <td><a href="view/${u.itemId}">Detail</a></td>
+      <td><a href="editform/${u.itemId}">Edit</a></td>
+      <td><a href="javascript:delete_ok('${u.itemId}')">Delete</a></td>
     </tr>
   </c:forEach>
 </table>

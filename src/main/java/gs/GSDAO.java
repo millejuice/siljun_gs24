@@ -29,15 +29,13 @@ public class GSDAO {
     }
 
     public int updateItem(GsVO item){
-        String sql = "update GS set "
-                + "itemName = " + item.getItemName() + ","
-                + "stock = " + item.getStock() + ","
-                + "itemPrice = " + item.getItemPrice() + ","
-                + "itemImage = " + item.getItemImage() + ","
-                + "uploadTime = " + item.getUploadTime() + ","
-                + "expirationDate = " + item.getExpirationDate() + ","
-                + "onePlusOne = " + item.getOnePlusOne() + ","
-                + "where itemId = " + item.getItemId();
+        String sql = "update GS set itemName = '" + item.getItemName() + "',"
+                + "stock = '" + item.getStock() + "',"
+                + "itemPrice = '" + item.getItemPrice() + "',"
+                + "itemImage = '" + item.getItemImage() + "',"
+                + "uploadTime = '" + item.getUploadTime() + "',"
+                + "expirationDate = '" + item.getExpirationDate() + "',"
+                + "onePlusOne = '" + item.getOnePlusOne() + "' where itemId ="  + item.getItemId();
         return jdbcTemplate.update(sql);
     }
 

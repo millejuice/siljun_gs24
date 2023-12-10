@@ -1,88 +1,48 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page import="gs.GsVO, gs.GSDAO" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>GS</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>첫 페이지</title>
+
+    <script>
+        function delete_ok(id){
+            let a = confirm("정말로 삭제하겠습니까?");
+            if(a) location.href='deleteok/' + id;
+        }
+    </script>
 </head>
 <body>
-<div class="store">
-    <div class="navbar">
+<div >
     <h1>주현이와 준영이의 마트</h1>
-        <div class="dropdown">
-            <button class="add-button" onclick="location.href='addpostform.jsp'">+</button>
-        </div>
-    </div>
-    <div class="item" data-name="Item 1" data-price="$10.00" data-expiration="2024-01-01">
-<%--        <img src="item1.jpg" alt="Item 1">--%>
-    </div>
-    <div class="item" data-name="Item 2" data-price="$15.00" data-expiration="2024-02-01">
-<%--        <img src="item2.jpg" alt="Item 2">--%>
-    </div>
-    <div class="item" data-name="Item 1" data-price="$10.00" data-expiration="2024-01-01">
-        <%--        <img src="item1.jpg" alt="Item 1">--%>
-    </div>
+
 </div>
+<br>
 
-</body>
-
+<p><a href="posts">마트 입장</a></p>
 <style>
-    .navbar{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    #list {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
         width: 100%;
-        height: 50px;
-        background-color: rgba(82, 98, 245, 1);
-        color: white;
     }
-    .add-button {
-        background-color: white;
-        color: rgba(82, 98, 245, 1);
-        padding: 10px 15px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border: none;
-        border-radius: 5px;
-    }
-
-
-    .store {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .item {
-        width: 150px;
-        height: 150px;
-        margin: 10px;
-        position: relative;
+    #list td, #list th {
         border: 1px solid #ddd;
-        box-shadow: 0px 0px 5px #aaa;
+        padding: 8px;
+        text-align:center;
     }
-
-    .item img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .item:hover::after {
-        content: attr(data-name) " - " attr(data-price) " - Expires: " attr(data-expiration);
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: white;
+    #list tr:nth-child(even){background-color: #f2f2f2;}
+    #list tr:hover {background-color: #ddd;}
+    #list th {
+        padding-top: 12px;
+        padding-bottom: 12px;
         text-align: center;
-        padding: 5px;
-        font-size: 0.8em;
+        background-color: #006bb3;
+        color: white;
     }
 </style>
+</body>
 </html>
 

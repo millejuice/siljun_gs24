@@ -31,8 +31,8 @@ public class GSServiceImpl implements GsService {
     }
 
     @Override
-    public List<GsVO> getItems(GsVO vo) {
-        return null;
+    public List<GsVO> getItems() {
+        return gsDAO.getItems();
     }
 
     @Override

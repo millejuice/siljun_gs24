@@ -7,7 +7,7 @@ public interface GsService {
     public int updateItem(GsVO vo);
     public int deleteItem(int itemId);
     public GsVO getItem(int itemId);
-    public List<GsVO> getItems(GsVO vo);
+    public List<GsVO> getItems();
     public void addOneplusone(GsVO vo);
     public void getPriceLimit(GsVO vo);
     public void getExpirationDate(GsVO vo);

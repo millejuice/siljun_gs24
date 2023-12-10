@@ -30,7 +30,7 @@
         </tr>
         <tr><td>Upload Time : <input type="date" name="uploadTime"></td></tr>
         <tr><td>Expiration Date : <input type="date" name="expirationDate"></td></tr>
-        <tr><td><a href="posts">View All Records</a></td><td align="right"><input type="button" value="Cancel" onclick="history.back()"/></td>
+        <tr><td><a href="index.jsp">View All Records</a></td><td align="right"><input type="button" value="Cancel" onclick="history.back()"/></td>
             <td align="right"><input type="submit" value="Add Post"/></td></tr>
     </table>
 </form>
