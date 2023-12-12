@@ -14,7 +14,7 @@ public class GSController {
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String addPost() {
-        return "add";
+        return "addpostform";
     }
 
     @RequestMapping(value = "/addok", method = RequestMethod.POST)
